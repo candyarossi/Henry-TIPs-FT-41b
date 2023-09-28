@@ -1,0 +1,22 @@
+{
+  "name": "mp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mercadopago": "^1.5.17"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
