@@ -33,11 +33,11 @@ server.post("/createOrder", (req, res) => {
       },
     ],
     back_urls: {
-      success: "https://9824-181-170-139-159.ngrok-free.app/payment/success",
-      failure: "https://9824-181-170-139-159.ngrok-free.app/failure",
-      pending: "https://9824-181-170-139-159.ngrok-free.app/pending",
+      success: "http://localhost:3001/payment/success",
+      failure: "http://localhost:3001/payment/failure",
+      pending: "http://localhost:3001/payment/pending",
     },
-    notification_url: "https://9824-181-170-139-159.ngrok-free.app/webhook",
+    notification_url: "https://c252-181-170-139-159.ngrok-free.app/webhook",
   };
   mercadopago.preferences
     .create(preference)
@@ -49,7 +49,8 @@ server.post("/createOrder", (req, res) => {
 
 server.get("/payment/success", (req, res) => {
   console.log(req.query);
-  res.send("Pago realizado");
+  // res.send("Pago realizado");
+  res.redirect("http://localhost:5173/payment/success");
 });
 
 server.listen(PORT, () => {
